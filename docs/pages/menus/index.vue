@@ -1,17 +1,12 @@
 <template>
-
   <DocsPageTemplate>
-
+    
+    <!-- Overview Section -->
     <DocsPageSection title="Overview" anchor="#overview">
-
       <p>Menus allow users to make a selection from a list of options. We use two types of menus: <em>Dropdown</em> and <em>Filter</em>.</p>
 
-      <h3>
-        Dropdown menu
-      </h3>
-      <p>
-        Allow users to discover and access complex actions. They can be generated from buttons, icons, and in some cases by right-clicking a location.
-      </p>
+      <h3>Dropdown menu</h3>
+      <p>Allows users to discover and access complex actions. They can be generated from buttons, icons, and in some cases by right-clicking a location.</p>
 
       <DocsShow>
         <img class="modal-img" src="./dropdown-menu.png">
@@ -25,7 +20,27 @@
       </DocsShow>
     </DocsPageSection>
 
-    <DocsPageSection title="Menu text" anchor="#menu-text">
+    <!-- Checkbox Menu Section -->
+    <DocsPageSection title="Checkbox Menu" anchor="#checkbox-menu">
+      <h3>Checkbox Menu</h3>
+      <p>Checkbox menus allow users to select multiple options from a list using checkboxes. This is useful when users need to make more than one choice at a time.</p>
+
+      <DocsShow>
+        <img class="modal-img" src="./check_boximg.png">
+      </DocsShow>
+
+      <h4>Behavior</h4>
+      <ul>
+        <li>Multiple options can be selected at once using checkboxes.</li>
+        <li>Checkboxes toggle between checked and unchecked states when clicked.</li>
+        <li>Options may be disabled and cannot be selected.</li>
+      </ul>
+      
+      
+    </DocsPageSection>
+
+    <!-- Menu Text Section -->
+    <DocsPageSection title="Menu Text" anchor="#menu-text">
       <ul>
         <li>Menu options can be user-generated text</li>
         <li>Menu text is 2-3 words by default</li>
@@ -36,18 +51,15 @@
     <DocsDoNot>
       <template #do>
         <img src="./text-do.png">
-        <p class="do-dont">
-          Minimize text and rely on interface clarity
-        </p>
+        <p class="do-dont">Minimize text and rely on interface clarity</p>
       </template>
       <template #not>
         <img src="./text-dont.png">
-        <p class="do-dont">
-          Write repetitive menu option text
-        </p>
+        <p class="do-dont">Write repetitive menu option text</p>
       </template>
     </DocsDoNot>
 
+    <!-- Layout Section -->
     <DocsPageSection title="Layout" anchor="#layout">
       <ul>
         <li>Menus appear above all other UI elements</li>
@@ -57,6 +69,7 @@
       </ul>
     </DocsPageSection>
 
+    <!-- Guidelines Section -->
     <DocsPageSection title="Guidelines" anchor="#guidelines">
       <ul>
         <li>Menus can contain icons</li>
@@ -69,38 +82,23 @@
     <DocsDoNot>
       <template #do>
         <img src="./icon-do.png">
-        <p class="do-dont">
-          Use iconography as a visual aid for important actions
-        </p>
+        <p class="do-dont">Use iconography as a visual aid for important actions</p>
       </template>
       <template #not>
         <img src="./icon-dont.png">
-        <p class="do-dont">
-          Use repetitive iconography in filter menus
-        </p>
+        <p class="do-dont">Use repetitive iconography in filter menus</p>
       </template>
     </DocsDoNot>
 
+    <!-- Specifications Section -->
     <DocsPageSection title="Specifications" anchor="#specifications">
       <ul>
         <li>Min width: 128px</li>
         <li>Menu elevation: 4dp</li>
-        <li>
-          Background color:
-          <DocsInternalLink code text="tokens.surface" href="/colors#palette.white" />
-        </li>
-        <li>
-          Option text color:
-          <DocsInternalLink code text="tokens.text" href="/colors#palette-grey-v_200" />
-        </li>
-        <li>
-          Option text hover color:
-          <DocsInternalLink code text="palette.grey.v_200" href="/colors#palette-grey-v_200" />
-        </li>
-        <li>
-          Iconography color:
-          <DocsInternalLink code text="palette.grey.v_800" href="/colors#palette-grey-v_800" />
-        </li>
+        <li>Background color: <DocsInternalLink code text="tokens.surface" href="/colors#palette.white" /></li>
+        <li>Option text color: <DocsInternalLink code text="tokens.text" href="/colors#palette-grey-v_200" /></li>
+        <li>Option text hover color: <DocsInternalLink code text="palette.grey.v_200" href="/colors#palette-grey-v_200" /></li>
+        <li>Iconography color: <DocsInternalLink code text="palette.grey.v_800" href="/colors#palette-grey-v_800" /></li>
       </ul>
       <h3>Dropdown menu</h3>
       <ul>
@@ -109,29 +107,21 @@
       </ul>
       <h3>Filter menu</h3>
       <ul>
-        <li>Width: width: matches the width of the text field that generates it</li>
+        <li>Width: matches the width of the text field that generates it</li>
         <li>Menu option height: 48px</li>
       </ul>
     </DocsPageSection>
 
-
   </DocsPageTemplate>
-
 </template>
 
-
 <script>
-
   export default {};
-
 </script>
 
-
 <style lang="scss" scoped>
-
   img,
   .do-dont {
     width: 400px;
   }
-
 </style>
